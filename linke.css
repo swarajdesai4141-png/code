@@ -1,0 +1,726 @@
+```css
+/* 
+   COMMON
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 35px auto 18px;
+    width: 88%;
+}
+
+
+/*
+   1. WHATSAPP NAVBAR
+ */
+
+.whatsapp-navbar {
+    width: 88%;
+    height: 50px;
+    margin: auto;
+
+    background: #111415;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px 0 13px;
+}
+
+
+/* Left */
+
+.wa-left {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.wa-profile {
+    width: 34px;
+    height: 34px;
+
+    background: #351622;
+    color: #e91e63;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 11px;
+}
+
+.wa-info {
+    min-width: 0;
+}
+
+.wa-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.wa-members {
+    font-size: 9px;
+    color: #777c7e;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    max-width: 650px;
+}
+
+
+/* Right */
+
+.wa-right {
+    display: flex;
+    align-items: center;
+}
+
+.wa-list {
+    height: 32px;
+
+    padding: 0 11px;
+
+    background: #111415;
+    color: #eee;
+
+    border: 1px solid #303536;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 11px;
+}
+
+.wa-list i:last-child {
+    font-size: 8px;
+}
+
+.wa-icon {
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+    border: none;
+
+    color: #ddd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 15px;
+}
+
+.wa-icon:hover {
+    background: #25292a;
+    border-radius: 50%;
+}
+
+.small {
+    font-size: 7px;
+}
+
+
+
+/* 
+   2. LINKEDIN NAVBAR
+ */
+
+.linkedin-navbar {
+    width: 88%;
+    height: 54px;
+
+    margin: auto;
+
+    background: white;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px;
+}
+
+
+/* Left */
+
+.li-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.linkedin-logo {
+    width: 29px;
+    height: 29px;
+
+    background: #0a66c2;
+    color: white;
+
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.li-search {
+    width: 210px;
+    height: 32px;
+
+    background: #eef3f8;
+
+    border: 1px solid #ddd;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+    gap: 8px;
+}
+
+.li-search i {
+    font-size: 12px;
+}
+
+.li-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 12px;
+}
+
+
+/* Menu */
+
+.li-menu {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.li-item {
+    height: 52px;
+
+    min-width: 48px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    position: relative;
+
+    color: #555;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.li-item>i {
+    font-size: 16px;
+}
+
+.li-item span {
+    font-size: 9px;
+}
+
+.li-item.active {
+    color: #222;
+}
+
+.li-item.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background: #222;
+}
+
+
+/* Badge */
+
+.li-icon-badge {
+    position: relative;
+}
+
+.li-icon-badge i {
+    font-size: 16px;
+}
+
+.li-icon-badge b {
+    position: absolute;
+
+    top: -8px;
+    right: -10px;
+
+    background: #cc1016;
+
+    color: white;
+
+    min-width: 15px;
+    height: 15px;
+
+    border-radius: 10px;
+
+    font-size: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Profile */
+
+.li-user {
+    width: 19px;
+    height: 19px;
+
+    border-radius: 50%;
+
+    background: #777;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+}
+
+.tiny {
+    font-size: 7px;
+}
+
+.li-divider {
+    width: 1px;
+    height: 45px;
+    background: #ddd;
+}
+
+.li-premium {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    min-width: 95px;
+}
+
+.li-premium i {
+    color: #e2a52b;
+    font-size: 12px;
+}
+
+.li-premium span {
+    color: #8b6b23;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+
+
+/*
+   3. BOOKMYSHOW NAVBAR
+ */
+
+.bms-navbar {
+    width: 88%;
+    margin: auto;
+
+    background: white;
+}
+
+
+/* Top */
+
+.bms-top {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 25px;
+}
+
+.bms-logo {
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #333;
+
+    white-space: nowrap;
+}
+
+.bms-logo span {
+    color: #e51b23;
+}
+
+.bms-search {
+    width: 320px;
+    height: 28px;
+
+    border: 1px solid #eee;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+
+    gap: 8px;
+}
+
+.bms-search i {
+    font-size: 10px;
+    color: #999;
+}
+
+.bms-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 10px;
+}
+
+.bms-location {
+    margin-left: auto;
+
+    font-size: 11px;
+    color: #444;
+
+    display: flex;
+    gap: 7px;
+}
+
+.bms-location i {
+    font-size: 7px;
+}
+
+.signin {
+    background: #f84464;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 6px 14px;
+
+    font-size: 9px;
+}
+
+.bms-menu {
+    color: #555;
+    font-size: 15px;
+}
+
+
+/* Bottom */
+
+.bms-bottom {
+    height: 25px;
+
+    background: #f5f5f5;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 0 130px;
+
+    font-size: 8px;
+
+    color: #555;
+}
+
+.bms-space {
+    flex: 1;
+}
+
+
+
+/* =====================================================
+   4. WISDOM SPROUTS NAVBAR
+===================================================== */
+
+.wisdom-navbar {
+    width: 88%;
+    height: 55px;
+
+    margin: auto;
+
+    background: #d9f0f0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    position: relative;
+}
+
+
+/* Logo */
+
+.wisdom-logo {
+    width: 180px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #238d91;
+}
+
+.logo-symbol {
+    font-size: 25px;
+}
+
+.wisdom-logo strong {
+    display: block;
+
+    font-size: 9px;
+
+    line-height: 9px;
+}
+
+.wisdom-logo small {
+    font-size: 6px;
+}
+
+
+/* Menu */
+
+.wisdom-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin: auto;
+}
+
+.wisdom-menu a {
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 9px;
+}
+
+.wisdom-menu a.selected {
+    color: #f27642;
+}
+
+
+/* Contact */
+
+.contact-btn {
+    background: #ff6b2c;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 20px;
+
+    padding: 7px 16px;
+
+    font-size: 9px;
+}
+
+
+
+/* =====================================================
+   5. INSTAGRAM FOOTER
+===================================================== */
+
+.instagram-footer {
+    width: 88%;
+    height: 80px;
+
+    margin: auto;
+
+    background: #0d1215;
+
+    color: #777;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+/* Links */
+
+.footer-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #777;
+
+    text-decoration: none;
+
+    font-size: 7px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* Bottom */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-size: 7px;
+}
+
+.footer-bottom i {
+    font-size: 6px;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .li-menu {
+        gap: 10px;
+    }
+
+    .li-search {
+        width: 160px;
+    }
+
+    .li-premium {
+        display: none;
+    }
+
+    .bms-bottom {
+        padding: 0 30px;
+    }
+
+    .wisdom-menu {
+        gap: 8px;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .section-title,
+    .whatsapp-navbar,
+    .linkedin-navbar,
+    .bms-navbar,
+    .wisdom-navbar,
+    .instagram-footer {
+        width: 95%;
+    }
+
+    .li-search {
+        width: 130px;
+    }
+
+    .li-menu {
+        gap: 5px;
+    }
+
+    .business,
+    .li-divider {
+        display: none;
+    }
+
+    .wisdom-menu {
+        display: none;
+    }
+
+    .wisdom-logo {
+        margin: auto;
+    }
+
+    .contact
